@@ -33,7 +33,14 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+          
+ # 1. db 정보를 담은 yml 파일 생성
+      - name: Make application.properties file
+        run: touch '${{ env.APPLICATION_PROPERTIES_FILE_PATH }}'
 
+      - name: Output application information
+        run: echo '${{ secrets.APPLICATION }}' > '${{ env.APPLICATION_PROPERTIES_FILE_PATH }}'
+        
       # (3) Gradle build (Test 제외)
       - name: Build with Gradle
         run: |
