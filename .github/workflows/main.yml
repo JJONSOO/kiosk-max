@@ -36,10 +36,10 @@ jobs:
           
  # 1. db 정보를 담은 yml 파일 생성
       - name: Make application.properties file
-        run: touch '${{ env.APPLICATION_PROPERTIES_FILE_PATH }}'
+        run: touch /home/ubuntu/app/backend/src/main/resources/application.yml
 
       - name: Output application information
-        run: echo '${{ secrets.APPLICATION }}' > '${{ env.APPLICATION_PROPERTIES_FILE_PATH }}'
+        run: echo '${{ secrets.APPLICATION }}' > /home/ubuntu/app/backend/src/main/resources/application.yml
         
       # (3) Gradle build (Test 제외)
       - name: Build with Gradle
