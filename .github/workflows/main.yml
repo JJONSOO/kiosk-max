@@ -39,7 +39,7 @@ jobs:
         run: |
           cd backend
           chmod +x gradlew
-          ./gradlew clean build -x teset
+          ./gradlew clean build -x test
         
 
       # (4) AWS 인증 (IAM 사용자 Access Key, Secret Key 활용)
