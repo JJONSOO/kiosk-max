@@ -8,6 +8,6 @@ public class Controller {
 
 	@GetMapping("/")
 	public String test(){
-		return "nginx Github Action";
+		return "8081 Github Action";
 	}
 }
