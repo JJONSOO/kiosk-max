@@ -39,7 +39,7 @@ jobs:
         run: touch ./backend/src/main/resources/application.yml
 
       - name: Output application information
-        run: echo '${{ secrets.APPLICATION }}' > .ㅌ /backend/src/main/resources/application.yml
+        run: echo '${{ secrets.APPLICATION }}' > ./backend/src/main/resources/application.yml
         
       # (3) Gradle build (Test 제외)
       - name: Build with Gradle
