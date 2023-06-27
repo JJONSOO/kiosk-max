@@ -4,7 +4,7 @@
 
 PROJECT_ROOT="/home/ubuntu/app/backend" # 프로젝트 루트
 JAR_FILE="$PROJECT_ROOT/build/libs/spring-webapp.jar" # JAR_FILE (어쩌구저쩌구.jar)
-DEPLOY_LOG="$PROJECT_ROOT/deploy.log"
+DEPLOY_LOG="/home/ubuntu/app/deploy.log"
 
 # service_url.inc 에서 현재 서비스를 하고 있는 WAS의 포트 번호 가져오기
 CURRENT_PORT=$(cat /home/ubuntu/service_url.inc | grep -Po '[0-9]+' | tail -1)
